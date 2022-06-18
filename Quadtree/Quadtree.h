@@ -5,10 +5,10 @@
 
 namespace QT
 {
-	class QuatTree
+	class Quadtree
 	{
 	public:
-		QuatTree(Rectangle boundary, int capacity);
+		Quadtree(Rectangle boundary, int capacity);
 		//插入圆形
 		void Insert(Circle circle);
 		//划分
@@ -23,9 +23,9 @@ namespace QT
 		int capacity;
 		std::vector<Circle> circles;
 		bool divided;
-		std::unique_ptr<QuatTree> northeast;
-		std::unique_ptr<QuatTree> northwest;
-		std::unique_ptr<QuatTree> southeast;
-		std::unique_ptr<QuatTree> southwest;
+		std::unique_ptr<Quadtree> northeast;
+		std::unique_ptr<Quadtree> northwest;
+		std::unique_ptr<Quadtree> southeast;
+		std::unique_ptr<Quadtree> southwest;
 	};
 }

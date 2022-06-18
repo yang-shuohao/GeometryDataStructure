@@ -2,7 +2,7 @@
 #include <conio.h>
 #include <graphics.h>
 
-#include "QuatTree.h"
+#include "Quadtree.h"
 #include "Circle.h"
 
 int width = 640;
@@ -18,7 +18,7 @@ int main()
 	initgraph(width, height);
 
 	QT::Rectangle boundary(width / 2, height / 2, width / 2, height / 2);
-	QT::QuatTree qt(boundary, 4);
+	QT::Quadtree qt(boundary, 4);
 
 	setlinecolor(GREEN);
 	for (int i = 0; i < 200; ++i)

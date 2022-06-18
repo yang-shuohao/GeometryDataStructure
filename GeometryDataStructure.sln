@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quadtree", "Quadtree\Quadtree.vcxproj", "{23B9FCF2-74C9-4242-B2C6-7644580F4785}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Octree", "Octree\Octree.vcxproj", "{0B18E033-41E1-4C88-BA6F-8E6ADC2E8CA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{23B9FCF2-74C9-4242-B2C6-7644580F4785}.Release|x64.Build.0 = Release|x64
 		{23B9FCF2-74C9-4242-B2C6-7644580F4785}.Release|x86.ActiveCfg = Release|Win32
 		{23B9FCF2-74C9-4242-B2C6-7644580F4785}.Release|x86.Build.0 = Release|Win32
+		{0B18E033-41E1-4C88-BA6F-8E6ADC2E8CA6}.Debug|x64.ActiveCfg = Debug|x64
+		{0B18E033-41E1-4C88-BA6F-8E6ADC2E8CA6}.Debug|x64.Build.0 = Debug|x64
+		{0B18E033-41E1-4C88-BA6F-8E6ADC2E8CA6}.Debug|x86.ActiveCfg = Debug|Win32
+		{0B18E033-41E1-4C88-BA6F-8E6ADC2E8CA6}.Debug|x86.Build.0 = Debug|Win32
+		{0B18E033-41E1-4C88-BA6F-8E6ADC2E8CA6}.Release|x64.ActiveCfg = Release|x64
+		{0B18E033-41E1-4C88-BA6F-8E6ADC2E8CA6}.Release|x64.Build.0 = Release|x64
+		{0B18E033-41E1-4C88-BA6F-8E6ADC2E8CA6}.Release|x86.ActiveCfg = Release|Win32
+		{0B18E033-41E1-4C88-BA6F-8E6ADC2E8CA6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,10 +1,10 @@
-#include "QuatTree.h"
+#include "Quadtree.h"
 #include <graphics.h>
 
 
 namespace QT
 {
-	QuatTree::QuatTree(Rectangle boundary, int capacity)
+	Quadtree::Quadtree(Rectangle boundary, int capacity)
 	{
 		this->boundary = boundary;
 		this->capacity = capacity;
@@ -12,7 +12,7 @@ namespace QT
 		this->divided = false;
 	}
 
-	void QuatTree::Insert(Circle circle)
+	void Quadtree::Insert(Circle circle)
 	{
 		if (!boundary.Container(circle))
 		{
@@ -36,7 +36,7 @@ namespace QT
 		}
 	}
 
-	void QuatTree::Subdivide()
+	void Quadtree::Subdivide()
 	{
 		float x = boundary.x;
 		float y = boundary.y;
@@ -48,15 +48,15 @@ namespace QT
 		Rectangle se(x + w / 2, y + h / 2, w / 2, h / 2);
 		Rectangle sw(x - w / 2, y + h / 2, w / 2, h / 2);
 
-		northeast = std::make_unique<QuatTree>(ne, capacity);
-		northwest = std::make_unique<QuatTree>(nw, capacity);
-		southeast = std::make_unique<QuatTree>(se, capacity);
-		southwest = std::make_unique<QuatTree>(sw, capacity);
+		northeast = std::make_unique<Quadtree>(ne, capacity);
+		northwest = std::make_unique<Quadtree>(nw, capacity);
+		southeast = std::make_unique<Quadtree>(se, capacity);
+		southwest = std::make_unique<Quadtree>(sw, capacity);
 
 		divided = true;
 	}
 
-	void QuatTree::Query(Rectangle range, std::vector<Circle>& found)
+	void Quadtree::Query(Rectangle range, std::vector<Circle>& found)
 	{
 		if (!boundary.Intersects(range))
 		{
@@ -81,7 +81,7 @@ namespace QT
 		}
 	}
 
-	void QuatTree::Draw()
+	void Quadtree::Draw()
 	{
 		rectangle(boundary.x - boundary.half_w, boundary.y - boundary.half_h, boundary.x + boundary.half_w, boundary.y + boundary.half_h);
 		if (divided)
